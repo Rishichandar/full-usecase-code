@@ -1,0 +1,65 @@
+
+
+#attach-file{
+  margin-top: 25px;
+  position: relative;
+  background-color: #4d81b9;
+  height: 40px;
+  width: 140px;
+
+
+}
+#add-btn{
+  margin-top: 25px;
+  position: relative;
+  left: 20px;
+  width: 140px;
+  background-color: rgb(27, 216, 59);
+  height: 40px;
+}
+
+#filled-basic,#outlined-basic,#outlined-multiline-static,#demo-multiple-name-label,#sel,#demo-simple-select{
+  font-size: 12px;
+  color: rgb(97, 92, 92);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#back-btn4{
+ position: relative;
+  top:60px;
+  left: 1180px;
+  width: 70px;
+  height: 30px;
+  text-align: center;
+  bottom: 10px;
+ 
+}
+#contain1 {
+  box-shadow: 2px 2px 7px 0 rgba(0, 0, 0, 0.2);
+  width: 450px;
+  height: 300px;
+  position: relative;
+  left: 200px;
+  top: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#title1 {
+  font-size: 20px;
+  letter-spacing: 4px;
+  color: #2d2e30;
+  position: relative;
+  /* bottom: 70px; */
+  
+}
+#usecase-Form{
+  width: 100px;
+  height: 100px;
+  /* border: 1px groove grey; */
+  position: relative;
+  left: 830px;
+  top: -200px;
+
+
+}

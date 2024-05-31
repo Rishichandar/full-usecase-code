@@ -1,0 +1,132 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Attendance Management API",
+    "description": "To Manage the Employee attendance."
+  },
+  "host": "localhost:8000",
+  "basePath": "/",
+  "schemes": ["http"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/user/auth": {
+      "get": {
+        "tags": ["Checks JWT Token"],
+        "summary": "To check Whether the JWT token is valid or not and to get the user details",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/authResp"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "/user/login": {
+      "post": {
+        "tags": ["User Login"],
+        "summary": "To Login",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "Email": {
+                    "type": "string",
+                    "default": "someone@gmail.com"
+                  },
+                  "Password": {
+                    "type": "string",
+                    "default": "password"
+                  }
+                },
+                "required": ["Email", "Password"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/authResp"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "user": {
+        "type": "object",
+        "properties": {
+          "CreatedAt": {
+            "type": "datetime"
+          },
+          "Email": {
+            "type": "string"
+          },
+          "IsActive": {
+            "type": "boolean"
+          },
+          "IsFirstLogin": {
+            "type": "boolean"
+          },
+          "Password": {
+            "type": "string"
+          },
+          "RoleId": {
+            "type": "integer",
+            "format": "int64",
+            "default": "1"
+          },
+          "UserId": {
+            "type": "integer",
+            "format": "int64",
+            "default": "1"
+          }
+        }
+      },
+      "LoginReq": {
+        "type": "object",
+        "properties": {
+          "Email": {
+            "type": "string"
+          },
+          "Password": {
+            "type": "string"
+          }
+        }
+      },
+      "authResp": {
+        "type": "object",
+        "properties": {
+          "Status": {
+            "type": "string"
+          },
+          "ErrMessage": {
+            "type": "string"
+          },
+          "Response": {
+            "$ref": "#/components/schemas/user"
+          }
+        }
+      }
+    }
+  }
+}

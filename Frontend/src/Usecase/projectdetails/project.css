@@ -1,0 +1,91 @@
+#reqfield {
+  position: relative;
+  font-size: 11px;
+  color: #313332;
+  letter-spacing: 1px;
+  top: -4px;
+}
+#sub {
+  width: clamp(100px, 50vw, 145px);
+  height: 45px;
+  padding: 0 1.25rem;
+  border: 1px groove;
+  border-color: #d5dbd7;
+  color: rgb(31, 29, 29);
+  border-radius: 25px;
+  margin: -0.625rem auto;
+  transition: all 250ms;
+  font-family: sans-serif;
+  background-color: #ffffff;
+  position: relative;
+  left: 486px;
+  top: 113px;
+  letter-spacing: 1px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+#attach-file1 {
+  position: relative;
+  top: 175px;
+  width: 145px;
+  height: 45px;
+  left: 30px;
+  border-radius: 25px;
+}
+#startdate {
+  border: 1px groove grey;
+  border-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  font-size: larger;
+  background-color: transparent;
+}
+#enddate {
+  border: 1px groove grey;
+  border-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  font-size: larger;
+  background-color: transparent;
+}
+#description,
+#email,
+#title,
+#tool,
+#startdate,
+#enddate,
+#file1 {
+  font-size: 12px;
+  /* border: 1px ridge rgb(76, 111, 151); */
+}
+::placeholder {
+  font-size: 10px;
+  font-family: "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif";
+}
+#success {
+  position: relative;
+  left: 310px;
+  bottom: 25px;
+  font-size: 13px;
+  color: #11ac2a;
+}
+
+.sidebar {
+  background-color: #1c1d1d;
+  z-index: 500;
+  position: fixed;
+  overflow: hidden;
+  top: 69px;
+  right: -670px; /* initially off-screen */
+  height: 92%;
+  width: 670px;
+  box-shadow: 0 0 10px rgba(12, 12, 12, 0.2);
+  transition: right 0.6s ease; /* animate the right property */
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.sidebar-content {
+  padding: 20px;
+  color: white;
+}

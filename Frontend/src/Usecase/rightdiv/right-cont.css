@@ -1,0 +1,128 @@
+#logo3{
+    width: 100%;
+}
+#logo-cont1{
+    width: 240px;
+    position: absolute;
+    top: 100px;
+    left:675px;
+    opacity: 0.9;
+
+ }
+
+
+#logo4{ 
+    width: 100%;
+}
+#logo-cont2{
+    width: 250px;
+    position: absolute;
+    top: 270px;
+    left: 1080px;
+    opacity: 0.9;
+
+ }
+ #logo5{ 
+    width: 100%;
+}
+#h3{
+   
+    color:  #45d374;
+    position: relative;
+    left: 65px;
+    bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 600;
+    
+
+}
+#h{
+    /* color: #1cf352; */
+    position: relative;
+    left: 45px;
+    bottom: 15px;
+}
+#para1{
+    width: 300px;
+    font-size: 12px;
+    line-height: 25px;
+    color: rgb(138, 138, 221);
+    position: relative;
+    left: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+    
+}
+#para2{
+    width: 275px;
+    font-size: 12px;
+    line-height: 26px;
+    color: rgb(160, 160, 229);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#task{
+    position: absolute;
+    top: 420px;
+    left: 660px;
+    font-size: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#time{
+    position: absolute;
+    top: 130px;
+    left: 1050px;
+    font-size: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#logo-cont3{
+    width: 240px;
+    position: absolute;
+    top: 390px;
+    left:1060px;
+    opacity: 10;
+
+ }
+ #logo6{ 
+    width: 100%;
+}
+#logo-cont4{
+    width: 500px;
+    position: absolute;
+    top: 140px;
+    left: 770px;
+    opacity: 0.9;
+
+ }
+ #logo7{ 
+    width: 100%;
+}
+#logo-cont5{
+    width: 550px;
+    position: absolute;
+    top: 230px;
+    left: 680px;
+    opacity: 0.8;
+
+ }
+ .slide-in {
+    animation: slideIn 3s ease-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+
+
+  

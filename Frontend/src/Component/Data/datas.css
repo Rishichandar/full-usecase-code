@@ -1,0 +1,108 @@
+.table-container {
+  margin-top: 18px;
+  height: 520px;
+  max-width: 100%;
+  /* Adjust the height as needed */
+  overflow: auto;
+  margin: auto; /* Center the table horizontally */
+  
+}
+
+.containerback {
+  text-align: center;
+  height: 6vh; /* Adjust as necessary */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admincon table {
+  width: 100%; /* Make the table fill the container */
+  /* table-layout: fixed; Fix the table layout to prevent it from expanding beyond its container */
+  border-collapse: collapse; /* Collapse table borders */
+}
+
+.admincon th,
+.admincon td {
+  padding: 10px; /* Add padding to table cells */
+  text-align: center; /* Center-align text */
+  border: 1px solid black; /* Add black border */
+}
+
+/* .admincon th {
+  background-color: rgb(
+    178,
+    241,
+    178
+  ); 
+
+} */
+.admincon th {
+  background-color: rgb(178, 241, 178);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+/* .search-container { */
+/* margin-bottom: 30px; */
+/* Add margin at the bottom of the search container */
+/* } */
+.admincon input[type="text"] {
+  padding: 8px; /* Add padding to the input field */
+  margin-right: 10px; /* Add margin to the right of the input field */
+  border: 1px solid #ccc; /* Add border to the input field */
+  border-radius: 4px; /* Add border-radius to the input field */
+  box-sizing: border-box; /* Ensure padding and border are included in the input's total width */
+  font-size: 16px; /* Set font size */
+  margin-bottom: 8px;
+}
+
+/* .search-container,.download-button {
+   margin-left: 300px;  */
+/* Add margin at the bottom of the search container */
+/* } */
+.download-button {
+  height: 32px;
+  width: 80px;
+  background-color: burlywood;
+  border-radius: 5px;
+}
+.search {
+  height: 35px;
+  width: 60px;
+  background-color: rgb(209, 154, 70);
+  margin-left: 30px;
+  border-radius: 5px;
+}
+.date {
+  border-radius: 10px;
+}
+/* .selectedDate {
+  margin-right: 30px;
+} */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  color: red;
+  font-family: "calibri";
+  font-weight: bold;
+  font-size: 17px;
+}
+
+
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.highlighted-text {
+  color: blue;
+}
