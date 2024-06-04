@@ -52,6 +52,41 @@ const port = process.env.PORT || 4023;
 
 
 // * -------------------------- USE CASE API----------------------------
+app.get("/landscape", (req, res) => {
+
+const sql = `SELECT 
+Userid, 
+date, 
+GROUP_CONCAT(CASE WHEN activity_type = 'Time In' THEN time END ORDER BY time) AS Timein,
+-- MIN(CASE WHEN activity_type = 'Time In' THEN time END) AS Timein,
+GROUP_CONCAT(CASE WHEN activity_type = 'breakin' THEN time END ORDER BY time) AS Breakin, 
+-- MAX(CASE WHEN activity_type = 'breakin' THEN time END) AS Breakin, 
+GROUP_CONCAT(CASE WHEN activity_type = 'breakout' THEN time END ORDER BY time) AS Breakout, 
+-- MAX(CASE WHEN activity_type = 'breakout' THEN time END) AS Breakout, 
+GROUP_CONCAT(CASE WHEN activity_type = 'lunchin' THEN time END ORDER BY time) AS Lunchin, 
+-- MAX(CASE WHEN activity_type = 'lunchin' THEN time END) AS Lunchin, 
+GROUP_CONCAT(CASE WHEN activity_type = 'lunchout' THEN time END ORDER BY time) AS Lunchout, 
+-- MAX(CASE WHEN activity_type = 'lunchout' THEN time END) AS Lunchout, 
+GROUP_CONCAT(CASE WHEN activity_type = 'Time Out' THEN time END ORDER BY time) AS Timeout,
+-- MAX(CASE WHEN activity_type = 'Time Out' THEN time END) AS Timeout,
+-- MAX(CASE WHEN comments IS NOT NULL THEN comments END) AS Comments  Adding comments section-- Assuming activity_comment is the correct column name for comments
+GROUP_CONCAT(comments SEPARATOR ', ') AS Comments -- Concatenate comments)
+FROM 
+pulse.time_table
+WHERE 
+date = UTC_DATE()
+GROUP BY 
+Userid, date 
+ORDER BY 
+Userid`; 
+db.query(sql, function (error, result) {
+  if (error) {
+    return res.json(error);
+  } else {
+    return res.json(result);
+  }
+});
+ });
 
 app.put("/api/project_info/delete/:Projectid", (req, res) => {
   const projectId = req.params.Projectid;
